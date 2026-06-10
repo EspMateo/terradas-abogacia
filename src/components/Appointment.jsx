@@ -2,9 +2,10 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import '../styles/Appointment.css'
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const clean = (s) => s?.replace(/^﻿/, '').trim()
+const SERVICE_ID = clean(import.meta.env.VITE_EMAILJS_SERVICE_ID)
+const TEMPLATE_ID = clean(import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
+const PUBLIC_KEY = clean(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
 
 const motivoOptions = [
   'Derecho Penal',
