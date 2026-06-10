@@ -26,7 +26,7 @@ export default function Appointment() {
   })
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
@@ -48,14 +48,15 @@ export default function Appointment() {
       comentario: form.comentario || '(Sin comentarios adicionales)',
     }
 
+    console.log('EmailJS config:', { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY })
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(() => {
         setLoading(false)
         setSent(true)
       })
-      .catch(() => {
+      .catch((err) => {
         setLoading(false)
-        setError(true)
+        setError(typeof err === 'object' ? JSON.stringify(err) : String(err))
       })
   }
 
@@ -108,7 +109,7 @@ export default function Appointment() {
                 <p>Todos los campos son necesarios para coordinar su consulta.</p>
                 {error && (
                   <p className="form-error">
-                    Hubo un error al enviar. Por favor intente nuevamente o contáctenos por WhatsApp.
+                    Error: {error}
                   </p>
                 )}
                 <form onSubmit={handleSubmit}>
