@@ -38,6 +38,7 @@ export default function Appointment() {
     setError(false)
 
     const templateParams = {
+      name: form.nombre,
       nombre: form.nombre,
       telefono: form.telefono,
       email: form.email,
