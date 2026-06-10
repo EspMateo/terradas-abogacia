@@ -1,0 +1,145 @@
+.contact {
+  background: linear-gradient(160deg, var(--plum) 0%, var(--burgundy) 60%, #3D1C35 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(176, 190, 173, 0.04) 0%, transparent 50%);
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.contact-text .section-label {
+  color: var(--gold-light);
+}
+
+.contact-text .section-title {
+  color: var(--white);
+}
+
+.contact-text .section-title span {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.contact-text .gold-line {
+  opacity: 0.6;
+}
+
+.contact-text > p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(201, 169, 110, 0.35);
+  transform: translateX(6px);
+}
+
+.contact-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-card-icon.whatsapp {
+  background: transparent;
+  color: #1a8a4a;
+}
+
+.contact-card-icon.instagram {
+  background: transparent;
+  color: var(--burgundy);
+}
+
+.contact-card-icon.email {
+  background: transparent;
+  color: #9a7840;
+}
+
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-card-text .contact-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-card-text .contact-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-card-arrow {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.25);
+  transition: var(--transition);
+}
+
+.contact-card:hover .contact-card-arrow {
+  color: var(--gold-light);
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    padding: 1rem 1.25rem;
+  }
+}
