@@ -29,8 +29,8 @@ const contacts = [
     icon: <WhatsAppIcon />,
     className: 'whatsapp',
     label: 'WhatsApp',
-    value: '098 139 197',
-    href: 'https://wa.me/59898139197',
+    value: '098 358 054',
+    href: 'https://wa.me/59898358054',
   },
   {
     icon: <InstagramIcon />,

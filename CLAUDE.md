@@ -69,7 +69,7 @@ Display email (shown on site): `abogada.terradaslucia@gmail.com`
 
 ## Contact data
 
-WhatsApp: `098 139 198` → `https://wa.me/59898139198`
+WhatsApp: `098 358 054` → `https://wa.me/59898358054`
 Instagram: `@terradasabogacia`
 Display email: `abogada.terradaslucia@gmail.com`
 

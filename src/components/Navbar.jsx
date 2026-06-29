@@ -38,7 +38,7 @@ export default function Navbar() {
           </ul>
 
           <a
-            href="https://wa.me/59898139197"
+            href="https://wa.me/59898358054"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar-cta"
@@ -65,7 +65,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://wa.me/59898139197"
+              href="https://wa.me/59898358054"
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-cta"
